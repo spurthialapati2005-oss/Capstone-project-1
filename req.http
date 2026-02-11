@@ -1,0 +1,95 @@
+### User Register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName": "Spurthi",
+    "lastName": "Alapati",
+    "email": "spurthi@mail.com",
+    "password": "spu1234",
+    "profileImageUrl": ""
+}
+
+### Author register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+    "firstName": "Spu",
+    "lastName": "Alapati",
+    "email": "spu@mail.com",
+    "password": "spu1234",
+    "profileImageUrl": ""   
+}
+
+### Authenticate user
+POST http://localhost:4000/common-api/authenticate
+Content-Type: application/json
+
+{
+    "email": "spurthi@mail.com",
+    "password": "spu1234"
+}
+
+### Create article (AUTHOR)
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author": "698cb6fbec9a96d6537d4483",
+    "title": "My second article",
+    "category": "test",
+    "content": "this is my second article"
+}
+
+### read all articles of author
+GET http://localhost:4000/author-api/articles/698cb6fbec9a96d6537d4483
+
+### edit the article
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author": "698cb6fbec9a96d6537d4483",
+    "articleId": "698cba2f550cd0ee6c87c6ce",
+    "title": "My first article",
+    "category":"test",
+    "content":"this is edited article"
+}
+
+### delete the article
+DELETE http://localhost:4000/author-api/articles/698cba2f550cd0ee6c87c6ce
+
+### logout
+GET http://localhost:4000/common-api/logout
+
+### read articles by user id
+GET http://localhost:4000/user-api/users
+
+### invalid path
+GET http://localhost:4000/test
+
+### write comments to the article
+POST http://localhost:4000/user-api/comments
+Content-Type: application/json
+
+{
+    "articleId":"698cc6ffd7e804dd3fa0bbfc",
+    "comment":"this article is very insightful"
+}
+
+
+### block the user
+GET http://localhost:4000/admin-api/block-users/698ca3df7c97e254d03e1b75
+
+### unblock the user
+GET http://localhost:4000/admin-api/unblock-users/698ca3df7c97e254d03e1b75
+
+### change the password
+PUT http://localhost:4000/common-api/change-password/698ca3df7c97e254d03e1b75
+Content-Type: application/json
+
+{
+    "currentPassword":"spu1234",
+    "newPassword":"spu12345"
+}
