@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content {
+            width: 85%;
+        }
+
+        .image {
+            width: 35%;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            border-right: 1px solid gray;
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-top: 5px;
+        }
+        .label {
+            font-style: italic;
+        }
+        hr {
+            margin-top: 20px ;
+        }
+        .footer {
+            font-size: 18px;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pochi the Cat</h1>
+    <div class="container">
+        <div class="content">
+            <h2>Introduction</h2>
+            <p>
+                Pochi was adopted from an animal shelter in Seatle, WA, where she runs a small but successful web page design business exclusively for cat clients.
+            </p>
+            <h2>Profile</h2>
+            <ol>
+                <li><span class="label">favorite food</span> - smoked salmon</li>
+                <li><span class="label">hobbies</span> - watching fishing on ESPN, snaking on garden flowers, monitoring the apartment parking lot</li>
+                <li><span class="label">hidden talent</span> -Karaoke</li>
+            </ol>
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#">Seattle Animal Control Shelter</a></li>
+                <li><a href="#">Humane Society of the United States</a></li>
+            </ul>
+            <hr>
+            <p class="footer">Last updated on 24 June 2013 by Pochi the Cat</p>
+        </div>
+        
+         <div class="image">
+            <!-- Replace dog.jpg with your actual dog image file name -->
+            <img src=".\assests\european-shorthair-8601492_640.jpg" alt="Pochi the Cat">
+        </div>
+        
+    </div>
+</body>
+</html>
